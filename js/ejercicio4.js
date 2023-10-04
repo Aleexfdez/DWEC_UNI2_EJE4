@@ -1,12 +1,11 @@
-
-
 function transformarATipos(cosas){
-    var arrayTipos=[]; 
+    let respuesta=new Array();
+    for (var i in cosas){
+        respuesta[i]=typeof(cosas[i]);
+    }
+    return respuesta;
+}
 
-for (var i = 0; i < array.length; i++) {
-    
-arrayTipos[i]=typeof(cosas[i]);
-}
-return arrayTipos
-}
-console.log(transformarATipos([23,"Alex",true]));
+
+console.log(transformarATipos([1,"casa", {}]));
+console.log(transformarATipos([function(){},true]));
